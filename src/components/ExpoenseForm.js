@@ -6,7 +6,8 @@ const ExpoenseForm = ({
   amount,
   handleCharge,
   handleAmount,
-  handleSubmit
+  handleSubmit,
+  edit
 }) => {
   return (
     <form onSubmit={handleSubmit}>
@@ -37,7 +38,7 @@ const ExpoenseForm = ({
         </div>
       </div>
       <button type="submit" className="btn">
-        submit
+        {edit ? "edit" : "submit"}
         <MdSend className="btn-icon" />
       </button>
     </form>
